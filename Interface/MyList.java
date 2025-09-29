@@ -50,7 +50,10 @@ public class MyList {
         }
     }
 
-    public void set(int i, int i1) {
-        
+    public void set(int index, int newValue) {
+        validateIndex(index);
+        listElements[index] = newValue;
     }
+
+
 }
