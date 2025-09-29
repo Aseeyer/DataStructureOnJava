@@ -35,4 +35,33 @@ public class MyListTest {
         MyList list = new MyList();
         assertThrows(IndexOutOfBoundsException.class, () -> list.get(0));
     }
+
+    @Test
+    void testIsEmpty() {
+        MyList list = new MyList();
+        list.add(10);
+        list.add(20);
+        list.clear();
+        assertEquals(0, list.size());
+    }
+
+    @Test
+    void testIsNotEmpty() {
+        MyList list = new MyList();
+        list.add(10);
+        list.add(20);
+        assertEquals(2, list.size());
+    }
+
+    @Test
+    void testSetReplacesElementAtSpecifiedPosition() {
+        MyList list = new MyList();
+        list.add(10);
+        list.add(20);
+        list.add(30);
+        list.add(40);
+        list.set(2, 30);
+        assertEquals(30, list.get(2));
+
+    }
 }

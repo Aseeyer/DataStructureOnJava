@@ -31,6 +31,10 @@ public class MyList {
         return currentSize;
     }
 
+    public void clear(){
+        currentSize = 0;
+    }
+
     private void ensureCapacity() {
         if (currentSize == listElements.length) {
             int newCapacity = listElements.length * 2;
@@ -44,5 +48,9 @@ public class MyList {
         if (targetIndex < 0 || targetIndex >= currentSize) {
             throw new IndexOutOfBoundsException("Invalid index: " + targetIndex);
         }
+    }
+
+    public void set(int i, int i1) {
+        
     }
 }
