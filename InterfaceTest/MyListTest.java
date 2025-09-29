@@ -60,8 +60,8 @@ public class MyListTest {
         list.add(20);
         list.add(30);
         list.add(40);
-        list.set(2, 30);
-        assertEquals(30, list.get(2));
+        list.set(2, 60);
+        assertEquals(60, list.get(2));
 
     }
 }
